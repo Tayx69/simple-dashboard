@@ -5,7 +5,6 @@ navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     if (link.id !== "logoutBtn") {
       navInfo.classList.add("active");
-      console.log("cihuy");
     }
   });
 });
