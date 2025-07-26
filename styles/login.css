@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  flex: 1;
+  background: url("../images/login-img.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.login-container {
+  width: 80%;
+  max-width: 350px;
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5e2b8c;
+}
+
+.login-container h5 {
+  margin-top: 1.5rem;
+  color: rgb(224, 33, 33);
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform linear 0.2s;
+}
+
+.input-group input::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.input-group input:focus {
+  transform: scale(1.03);
+  outline: none;
+  border: 2px solid #4e2172;
+  opacity: 0.8;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox label {
+  cursor: pointer;
+}
+
+.login-container button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: #5e2b8c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(94, 43, 140, 0.3);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login-container button:hover {
+  background-color: #4e2172;
+}
+
+.login-container .footer {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-container .footer a {
+  color: #5e2b8c;
+  text-decoration: none;
+}
+
+.login-container .social-login {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.login-container .social-login img {
+  width: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 820px) {
+  .left {
+    display: none;
+  }
+  .login-container {
+    backdrop-filter: blur(20px);
+    background-color: rgba(252, 252, 252, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+}

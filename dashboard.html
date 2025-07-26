@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="styles/dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Navlinks -->
+      <aside class="sidebar" id="navbar">
+        <ul>
+          <li>
+            <iconify-icon
+              icon="lucide:layout-list"
+              width="23"
+              height="23"
+            ></iconify-icon>
+            <h5 class="navInfo">Dashboard</h5>
+          </li>
+          <li>
+            <iconify-icon
+              icon="solar:box-linear"
+              width="23"
+              height="23"
+            ></iconify-icon>
+            <h5 class="navInfo">Product</h5>
+          </li>
+          <li>
+            <iconify-icon
+              icon="mynaui:cart"
+              width="23"
+              height="23"
+            ></iconify-icon>
+            <h5 class="navInfo">Orders</h5>
+          </li>
+          <li>
+            <iconify-icon
+              icon="solar:user-outline"
+              width="23"
+              height="23"
+            ></iconify-icon>
+            <h5 class="navInfo">Customer</h5>
+          </li>
+          <li>
+            <iconify-icon
+              icon="solar:wallet-linear"
+              width="23"
+              height="23"
+            ></iconify-icon>
+            <h5 class="navInfo">Finance</h5>
+          </li>
+          <li>
+            <iconify-icon
+              icon="lucide:chart-line"
+              width="23"
+              height="23"
+            ></iconify-icon>
+            <h5 class="navInfo">Analytics</h5>
+          </li>
+          <li>
+            <iconify-icon
+              icon="akar-icons:gear"
+              width="23"
+              height="23"
+            ></iconify-icon>
+            <h5 class="navInfo">Settings</h5>
+          </li>
+          <li id="logoutBtn">
+            <iconify-icon
+              icon="material-symbols:logout"
+              width="23"
+              height="23"
+            ></iconify-icon>
+            <h5 class="navInfo">Logout</h5>
+          </li>
+        </ul>
+      </aside>
+      <div class="warn-overlay" id="warnBox">
+        <div class="warn-box">
+          <p>Are you sure you want to log out?</p>
+          <div class="warn-buttons">
+            <button class="cancel-btn" id="cancelButton">Cancel</button>
+            <button class="logout-btn" id="logoutButton">Log Out</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navlinks End -->
+
+      <main class="main-content">
+        <canvas id="myChart1"></canvas>
+        <canvas id="myChart2"></canvas>
+        <canvas id="myChart3"></canvas>
+      </main>
+    </div>
+
+    <script src="script/dashboard.js"></script>
+  </body>
+</html>
